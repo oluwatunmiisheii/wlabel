@@ -2,9 +2,11 @@ import { FC } from "react"
 import { Link } from "react-router-dom";
 import DroneImage from "assets/images/Drone.png";
 import LogoAllWhite from "assets/images/LogoAllWhite.png";
+import { createPortal } from "react-dom";
 
-export const FullScreenMenu: FC<{close: () => void}> = ({ close }) => {
-  return (
+export const FullScreenMenu: FC<{close: () => void; isOpen: boolean}> = ({ close, isOpen }) => {
+  if(!isOpen) return null;
+  return createPortal(
     <div className="block fixed inset-0 z-10 w-full h-full">
       <div className="relative m-auto p-0 h-screen bg-[#ef5f1e] w-full px-10">
         <div className="py-[16px] px-[16px] border-0 flex justify-between items-center">
@@ -36,5 +38,6 @@ export const FullScreenMenu: FC<{close: () => void}> = ({ close }) => {
         </div>
       </div>
     </div>
+    , document.body
   );
 }

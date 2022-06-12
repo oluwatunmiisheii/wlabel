@@ -7,6 +7,7 @@ const close = jest.fn();
 
 const defaultProps: ComponentProps<typeof FullScreenMenu> = {
   close,
+  isOpen: true
 };
 
 const setup = (props: ComponentProps<typeof FullScreenMenu> = defaultProps) =>
@@ -31,4 +32,10 @@ describe(`${FullScreenMenu.name}`, () => {
     fireEvent.click(routeLink);
     expect(window.location.pathname).toBe('/');
   });
+
+  //should return null if not open
+  it('should return null if not open', () => {
+    const { container } = setup({ ...defaultProps, isOpen: false });
+    expect(container).toBeEmptyDOMElement();
+  })
 });

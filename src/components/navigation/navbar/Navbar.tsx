@@ -28,7 +28,7 @@ const NavOne = ({ toggle }: {toggle: () => void}) => {
         <Link to="/" className="p-4 text-gray-600 text-sm">
           BLOG
         </Link>
-        <Link to="/" className="p-4 text-gray-600 text-sm">
+        <Link to="/" className="p-4 text-gray-600 text-sm pr-0">
           CONTACT
         </Link>
       </div>
@@ -78,7 +78,7 @@ export const Navbar: FC<INavbarProps> = ({ navType, theme }) => {
         role="navigation"
       >
         {navType === "one" ? <NavOne toggle={toggle} /> : <NavTwo toggle={toggle} theme={theme} />}
-        {isOpen && <FullScreenMenu close={toggle} />}
+        {isOpen && <FullScreenMenu close={toggle} isOpen={isOpen} />}
       </nav>
     </header>
   );
