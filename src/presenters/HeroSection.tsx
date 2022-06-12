@@ -4,7 +4,7 @@ import DroneImage from "assets/images/Drone.png";
 export const HeroSection = () => {
   return (
     <Section navType="one" theme="grey">
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center pt-16">
         <img src={DroneImage} alt="drone" className="w-full md:w-[38%] object-cover" />
         <h1 className="text-7xl md:text-7xl lg:text-xxl font-black text-white tracking-wide mt-6 leading-tight md:leading-none">
           F-210
