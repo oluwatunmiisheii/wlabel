@@ -8,7 +8,7 @@ import { AiOutlineTwitter } from "react-icons/ai";
 import { useTheme } from "hooks/useTheme";
 
 
-export type theme = 'light' | 'dark' | 'grey'
+export type Theme = 'light' | 'dark' | 'grey'
 
 const NavOne = ({ toggle }: {toggle: () => void}) => {
   return (
@@ -40,7 +40,7 @@ const NavOne = ({ toggle }: {toggle: () => void}) => {
 }
 
 
-const NavTwo = ({ toggle, theme }: {toggle: () => void, theme: theme }) => {
+const NavTwo = ({ toggle, theme }: {toggle: () => void, theme: Theme }) => {
   const { getStylesFromTheme } = useTheme(theme);
   const { logo, socialIconColor } = getStylesFromTheme();
   return (
@@ -64,7 +64,7 @@ const NavTwo = ({ toggle, theme }: {toggle: () => void, theme: theme }) => {
 
 interface INavbarProps {
   navType?: "one" | "two",
-  theme: theme
+  theme: Theme
 }
 
 export const Navbar: FC<INavbarProps> = ({ navType, theme }) => {
@@ -72,15 +72,13 @@ export const Navbar: FC<INavbarProps> = ({ navType, theme }) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <header>
-      <nav 
-        className="w-11/12 md:w-4/5 m-auto py-16 flex justify-between items-center h-16 text-black relative"
-        role="navigation"
-      >
-        {navType === "one" ? <NavOne toggle={toggle} /> : <NavTwo toggle={toggle} theme={theme} />}
-        {isOpen && <FullScreenMenu close={toggle} isOpen={isOpen} />}
-      </nav>
-    </header>
+    <nav 
+      className="w-11/12 md:w-4/5 m-auto py-16 flex justify-between items-center h-16 text-black relative"
+      role="navigation"
+    >
+      {navType === "one" ? <NavOne toggle={toggle} /> : <NavTwo toggle={toggle} theme={theme} />}
+      {isOpen && <FullScreenMenu close={toggle} isOpen={isOpen} />}
+    </nav>
   );
 };
 

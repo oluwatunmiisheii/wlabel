@@ -1,34 +1,18 @@
-import { Button } from "components/button/Button";
-import { Input } from 'components/forms/shared/input/Input';
-import { Textarea } from 'components/forms/shared/textarea/Textarea';
-import { Navbar } from "components/navigation/navbar/Navbar";
+import { Section } from 'components/section/Section';
 
 
 function App() {
   return (
-    <div>
-      <Navbar navType="one" theme="light" />
-      <Navbar navType="two" theme="dark" />
-      <Input
-        labelText="Email"
-        name="email"
-        id="email"
-        placeholder="Enter your email"
-        type="email"
-        onChange={() => {}}
-        value="email"
-      />
-      <Textarea 
-        labelText="Message"
-        name="message"
-        id="message"
-        placeholder="What are your plans?"
-        onChange={() => {}}
-        value="message"
-      />
-     <Button type="submit" variant="primary" size='medium'>
-        Send Message
-      </Button>
+    <div className="main__wrapper">
+      <Section theme="grey">
+        hello world
+      </Section>
+      <Section theme="dark">
+        hello world
+      </Section>
+      <Section theme="light">
+        hello world
+      </Section>
     </div>
   );
 }

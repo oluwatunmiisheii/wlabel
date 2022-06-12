@@ -1,9 +1,9 @@
 
-import { theme } from "components/navigation/navbar/Navbar";
+import { Theme } from "components/navigation/navbar/Navbar";
 import NavLogo from "assets/images/Logo.png";
 import NavLogoWhite from "assets/images/LogoWhite.png";
 
-export const useTheme = (theme: theme) => {
+export const useTheme = (theme: Theme) => {
   const getStylesFromTheme = () => {
     switch (theme) {
       case 'light':
