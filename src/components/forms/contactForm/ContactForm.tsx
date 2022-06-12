@@ -21,12 +21,18 @@ export const ContactForm: FC<Props> = () => {
     setValues({ ...values, [name]: value});
   }
 
+  const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(values);
+  }
+
   return ( 
-    <form>
+    <form onSubmit={submitForm}>
       <Input
         labelText="Full Name"
         name="name"
         id="name"
+        required
         placeholder="Enter your name"
         onChange={updateInputValue}
         value={values.name}
@@ -38,6 +44,7 @@ export const ContactForm: FC<Props> = () => {
         placeholder="Enter your email"
         type="email"
         onChange={updateInputValue}
+        required
         value={values.email}
       />
       <Textarea 
@@ -46,6 +53,7 @@ export const ContactForm: FC<Props> = () => {
         id="message"
         placeholder="What are your plans?"
         onChange={updateInputValue}
+        required
         value={values.message}
       />
       <Button type="submit" variant="primary" size='medium'>
