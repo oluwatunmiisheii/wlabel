@@ -47,10 +47,10 @@ const NavTwo = ({ toggle, theme }: {toggle: () => void, theme: Theme }) => {
     <> 
       <div>
         <div className="md:flex justify-between w-[5%] hidden">
-          <button className={`p-2 ${socialIconColor}`}>
+          <button className={`pr-2 ${socialIconColor}`}>
             <FaFacebookSquare />
           </button>
-          <button className={`p-2 ${socialIconColor}`}>
+          <button className={`pl-2 ${socialIconColor}`}>
             <AiOutlineTwitter />
           </button>
         </div>
@@ -73,7 +73,7 @@ export const Navbar: FC<INavbarProps> = ({ navType, theme }) => {
 
   return (
     <nav 
-      className="w-11/12 md:w-4/5 m-auto py-16 flex justify-between items-center h-16 text-black relative"
+      className="w-[90%] m-auto py-16 flex justify-between items-center h-16 text-black relative"
       role="navigation"
     >
       {navType === "one" ? <NavOne toggle={toggle} /> : <NavTwo toggle={toggle} theme={theme} />}
