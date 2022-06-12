@@ -19,6 +19,7 @@ export const Button: FC<IButtonProps> = (props) => {
       type={type}
       disabled={props.disabled}
       className={`button ${props.variant} ${props.size} ${props.extraClass}`}
+      aria-label="button"
     >
       {children}
     </button>
