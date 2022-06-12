@@ -21,16 +21,16 @@ export const FullScreenMenu: FC<{close: () => void}> = ({ close }) => {
           </div>
           <div className="text-right">
             <Link to="/" className="text-white uppercase block font-bold text-3xl">
-              STORE
+              store
             </Link>
             <Link to="/" className="text-white uppercase block font-bold text-3xl">
-              TUTORIALS
+              tutorials
             </Link>
             <Link to="/" className="text-white uppercase block font-bold text-3xl">
-              Blogs
+              blogs
             </Link>
             <Link to="/" className="text-white uppercase block font-bold text-3xl">
-              Contact
+              contact
             </Link>
           </div>
         </div>
