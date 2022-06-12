@@ -1,3 +1,4 @@
+import { ContactForm } from 'components/forms/contactForm/ContactForm';
 import { Section } from 'components/section/Section';
 
 
@@ -5,13 +6,11 @@ function App() {
   return (
     <div className="main__wrapper">
       <Section theme="grey">
-        hello world
-      </Section>
-      <Section theme="dark">
-        hello world
-      </Section>
-      <Section theme="light">
-        hello world
+        <div className='grid grid-cols-1 lg:grid-cols-8 mx-auto'>
+          <div className='col-span-8 lg:col-start-2 lg:col-span-6'>
+            <ContactForm />
+          </div>
+        </div>
       </Section>
     </div>
   );
