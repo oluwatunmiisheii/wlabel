@@ -1,7 +1,12 @@
+import { Button } from "components/button/Button";
+
+
 function App() {
   return (
     <div>
-      <h1>Hello World</h1>
+     <Button type="submit" variant="primary" size='medium'>
+        Send Message
+      </Button>
     </div>
   );
 }
