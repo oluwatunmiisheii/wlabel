@@ -3,7 +3,7 @@ import { useTheme } from 'hooks/useTheme'
 import { Section } from "components/section/Section";
 import { Theme } from 'components/navigation/navbar/Navbar';
 
-interface IProductDetailsProps {
+export interface IProductDetailsProps {
   title: string,
   description: string,
   imgSrc: string,
