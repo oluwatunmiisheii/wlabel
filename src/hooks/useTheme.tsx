@@ -11,21 +11,21 @@ export const useTheme = (theme: Theme) => {
           backgroundColor: '#fff',
           color: 'text-gray-800',
           logo: NavLogo,
-          socialIconColor: 'text-gray-300'
+          textGray: "text-gray-300",
         };
       case 'dark':
         return {
           backgroundColor: 'bg-[#040505]',
-          color: '#fff',
+          color: 'text-white',
+          textGray: "text-gray-700",
           logo: NavLogoWhite,
-          socialIconColor: 'text-gray-700'
         }
       default:
         return {
           backgroundColor: 'bg-[#f4f1ec]',
           color: 'text-gray-800',
+          textGray: "text-gray-300",
           logo: NavLogo,
-          socialIconColor: 'text-gray-300'
         }
     }
   }

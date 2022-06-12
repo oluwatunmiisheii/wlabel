@@ -26,3 +26,18 @@ html {
   height: 100vh;
   scroll-snap-align: start;
 }
+
+.title::after {
+  content: "";
+  display: block;
+  width: 18%;
+  height: 2px;
+  background-color: #ef5f1e;
+  margin-top: 4px;
+}
+
+.product__meta {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}

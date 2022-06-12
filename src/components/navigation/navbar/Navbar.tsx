@@ -42,15 +42,15 @@ const NavOne = ({ toggle }: {toggle: () => void}) => {
 
 const NavTwo = ({ toggle, theme }: {toggle: () => void, theme: Theme }) => {
   const { getStylesFromTheme } = useTheme(theme);
-  const { logo, socialIconColor } = getStylesFromTheme();
+  const { logo, textGray } = getStylesFromTheme();
   return (
     <> 
       <div>
         <div className="md:flex justify-between w-[5%] hidden">
-          <button className={`pr-2 ${socialIconColor}`}>
+          <button className={`pr-2 ${textGray}`}>
             <FaFacebookSquare />
           </button>
-          <button className={`pl-2 ${socialIconColor}`}>
+          <button className={`pl-2 ${textGray}`}>
             <AiOutlineTwitter />
           </button>
         </div>
