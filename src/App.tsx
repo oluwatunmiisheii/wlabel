@@ -1,10 +1,14 @@
 import { Button } from "components/button/Button";
 import { Input } from 'components/forms/shared/input/Input';
 import { Textarea } from 'components/forms/shared/textarea/Textarea';
+import { Navbar } from "components/navigation/navbar/Navbar";
+
 
 function App() {
   return (
     <div>
+      <Navbar navType="one" theme="light" />
+      <Navbar navType="two" theme="dark" />
       <Input
         labelText="Email"
         name="email"
