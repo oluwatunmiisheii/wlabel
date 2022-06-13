@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, useId } from "react"
 import { useTheme } from 'hooks/useTheme'
 import { Section } from "components/section/Section";
 import { Theme } from 'components/navigation/navbar/Navbar';
@@ -19,10 +19,10 @@ export const ProductDetailsSection: FC<IProductDetailsProps> = ({ title, descrip
   const { color, textGray } = getStylesFromTheme()
 
   return (
-    <Section theme={theme}>
+    <Section theme={theme} mainContentId={`${title.split(' ')[0]}-${useId()}`}>
       <div className="flex justify-between flex-col md:flex-row items-center">
         <div className={`text-white w-full md:w-2/5 ${imageFirst ? 'order-2' : 'order-1 mb-2 md:mb-0'}`}>
-          <h1 className={`text-4xl title ${color}`}>{title}</h1>
+          <h1 className={`text-2xl md:text-4xl title ${color}`}>{title}</h1>
           <p className='text-gray-400 text-[15px] md:text-xl leading-8 mt-4'>
             {description}
           </p>

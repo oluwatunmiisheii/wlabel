@@ -41,3 +41,18 @@ html {
   text-orientation: mixed;
   transform: rotate(180deg);
 }
+
+.skip-to-content-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-to-content-link:focus {
+  height: auto;
+  position: static;
+  width: auto;
+}
