@@ -36,7 +36,7 @@ export const ProductDetailsSection: FC<IProductDetailsProps> = ({ title, descrip
       {attributes && (
         <ul className="hidden md:flex justify-center md:justify-between md:mx-auto mt-20">
           {attributes?.map(({ key, value }) => (
-            <li key={key} className='text-gray-400 text:base md:text-xl leading-8 mt-4 px-5 uppercase'>
+            <li key={key} className='text-gray-400 text:base md:text-xl leading-8 mt-4 uppercase px-12'>
               <p className='leading-6 text-3xl text-white text-center'>{value}</p>
               <p className='text-[10px] leading-6'>{key}</p>
             </li>
