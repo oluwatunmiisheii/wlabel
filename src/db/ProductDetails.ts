@@ -29,10 +29,5 @@ export const productDetails: IProductDetailsProps[]  = [
     description:  "Classic outer design, more humane control design. Adopting 2.4HZ direct sequence spread spectrum  technology (DSSS), the Devo 7 can match frequency and assign ID automatically. The devo7 has wireless copy function, The player can set its own fixed",
     imgSrc: RemoteImage,
     imageFirst: false,
-    attributes: [
-      { key: "tvl video", value: "700" },
-      { key: "visual range", value: "120 \u00B0" },
-      { key: "night vision", value: "hd" }
-    ]
   }
 ]

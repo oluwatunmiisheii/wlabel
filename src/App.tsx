@@ -8,7 +8,7 @@ function App() {
     <div className="main__wrapper">
       <HeroSection />
       {productDetails.map((details) => (
-        <ProductDetailsSection {...details} />
+        <ProductDetailsSection {...details} key={details.title} />
       ))}
       <ContactSection />
     </div>

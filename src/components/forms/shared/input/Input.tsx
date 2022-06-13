@@ -8,7 +8,7 @@ interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const Input = forwardRef<HTMLInputElement & HTMLTextAreaElement, IInputProps>((props, ref) => {
+export const Input = forwardRef<HTMLInputElement, IInputProps>((props, ref) => {
   const { type, name, id, placeholder, labelText, ...rest } = props;
   return (
     <div className="relative mb-8">
