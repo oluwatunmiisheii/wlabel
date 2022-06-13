@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Archivo";
+  src: url("./assets/fonts/Archivo-Regular.ttf");
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main__wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 18%;
+  height: 2px;
+  background-color: #ef5f1e;
+  margin-top: 4px;
+}
+
+.product__meta {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+.skip-to-content-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-to-content-link:focus {
+  height: auto;
+  position: static;
+  width: auto;
+}

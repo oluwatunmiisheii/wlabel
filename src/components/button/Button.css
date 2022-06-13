@@ -1,0 +1,29 @@
+.button {
+  @apply inline-flex items-center px-5 py-2 text-base font-medium shadow-sm transition-all duration-150 ease-in-out;
+}
+
+.button:focus {
+  @apply outline-none;
+}
+
+.button:disabled {
+  @apply cursor-not-allowed;
+  @apply bg-gray-300;
+}
+
+.primary {
+  background-color: #ef5f1e;
+  color: #ffffff;
+}
+
+.small {
+  @apply px-3 py-1.5;
+}
+
+.medium {
+  @apply px-5 py-2;
+}
+
+.large {
+  @apply px-9 py-3.5;
+}
