@@ -1,7 +1,7 @@
 import { FC, useId } from "react"
-import { useTheme } from 'hooks/useTheme'
+import { useTheme } from "hooks/useTheme"
 import { Section } from "components/section/Section";
-import { Theme } from 'components/navigation/navbar/Navbar';
+import { Theme } from "components/navigation/navbar/Navbar";
 
 export interface IProductDetailsProps {
   title: string,
@@ -21,13 +21,13 @@ export const ProductDetailsSection: FC<IProductDetailsProps> = ({ title, descrip
   return (
     <Section theme={theme} mainContentId={`${title.split(' ')[0]}-${useId()}`}>
       <div className={`flex justify-between flex-col-reverse items-center ${imageFirst ? 'lg:flex-row-reverse' : "lg:flex-row"}`}>
-        <div className={`text-white w-full lg:w-2/5`}>
+        <div className="text-white w-full lg:w-2/5 pt-6 lg:pt-0">
           <h1 className={`text-2xl md:text-4xl title ${color}`}>{title}</h1>
-          <p className='text-gray-400 text-[15px] md:text-xl leading-8 mt-4'>
+          <p className="text-gray-400 text-[15px] md:text-xl leading-8 mt-4">
             {description}
           </p>
         </div>
-        <div className="w-full md:w-2/5 sm:mb-4 lg:mb-0">
+        <div className="w-full md:w-2/5 lg:mb-0">
           <div className="relative h-full flex items-center justify-center text-center">
             <img src={imgSrc} className="max-w-full md:h-auto h-32" alt={title} />
           </div>
@@ -36,9 +36,9 @@ export const ProductDetailsSection: FC<IProductDetailsProps> = ({ title, descrip
       {attributes && (
         <ul className="hidden md:flex justify-center md:justify-between md:mx-auto mt-20">
           {attributes?.map(({ key, value }) => (
-            <li key={key} className='text-gray-400 text:base md:text-xl leading-8 mt-4 uppercase px-12'>
-              <p className='leading-6 text-3xl text-white text-center'>{value}</p>
-              <p className='text-[10px] leading-6'>{key}</p>
+            <li key={key} className="text-gray-400 text:base md:text-xl leading-8 mt-4 uppercase px-12">
+              <p className="leading-6 text-3xl text-white text-center">{value}</p>
+              <p className="text-[10px] leading-6">{key}</p>
             </li>
           ))}
         </ul>
