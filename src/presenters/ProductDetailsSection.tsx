@@ -20,14 +20,14 @@ export const ProductDetailsSection: FC<IProductDetailsProps> = ({ title, descrip
 
   return (
     <Section theme={theme} mainContentId={`${title.split(' ')[0]}-${useId()}`}>
-      <div className="flex justify-between flex-col lg:flex-row items-center">
-        <div className={`text-white w-full lg:w-2/5 ${imageFirst ? 'order-2' : 'order-1 mb-2 lg:mb-0'}`}>
+      <div className={`flex justify-between flex-col-reverse items-center ${imageFirst ? 'lg:flex-row-reverse' : "lg:flex-row"}`}>
+        <div className={`text-white w-full lg:w-2/5`}>
           <h1 className={`text-2xl md:text-4xl title ${color}`}>{title}</h1>
           <p className='text-gray-400 text-[15px] md:text-xl leading-8 mt-4'>
             {description}
           </p>
         </div>
-        <div className={`w-full md:w-2/5 ${imageFirst ? 'order-1 mb-2 lg:mb-0' : 'order-2'}`}>
+        <div className="w-full md:w-2/5 sm:mb-4 lg:mb-0">
           <div className="relative h-full flex items-center justify-center text-center">
             <img src={imgSrc} className="max-w-full md:h-auto h-32" alt={title} />
           </div>
